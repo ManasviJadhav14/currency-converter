@@ -1,0 +1,39 @@
+<html>
+     <head>
+           <title> Currency converter app by manasvi</title>
+           <style>
+                 *{font-size:60px;font-family:Cambria;}
+                  body{background-color:linen;}
+           </style>
+     </head>
+     <body>
+          <center>
+                 <h1>Currency Converter</h1>
+                 <form>
+                       <label for"dollar">Amt in $</label>
+                  <input type="number"step="any"id="dollar"placeholder="enter Amt in $"/>
+                       <br/><br/>
+                       <label for"rupees">Amt in ₹</label>
+                  <input type="number"step="any"id="rupees"placeholder="enter Amt in ₹"/>
+                       <br/><br/>
+                 </form>
+                  <script>
+                        let d=document.getElementById("dollar");
+                        let r=document.getElementById("rupees");
+       
+                       dollar.addEventListener("input",function(){
+                              let d=parseFloat(dollar.value);
+                              let r=d/84;
+                              rupees.value=r.toFixed(2);
+                        });
+                       
+                         rupees.addEventListener("input",function(){
+                              let r=parseFloat(rupees.value);
+                              let d=r*84;
+                              dollar.value=d.toFixed(2);
+                        });
+                   </script>
+          </center>
+
+     </body>
+</html>
